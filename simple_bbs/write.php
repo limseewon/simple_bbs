@@ -1,26 +1,30 @@
+<?php
+  require_once('config.php');
+
+  $sql = "SELECT * FROM bbs";
+  $result = mysqli_query($mysqli, $sql);
+?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>write - Simple BBS</title>
+  <title>Home - Simple BBS</title>
 </head>
 <body>
-  <h1>글쓰기</h1>
-  <form action="insert.php" method="POST">
-    <p>
-      <label for="username">이름: </label>
-      <input type="text" id="username" name="username" require>
-    </p>
-    <p>
-      <label for="usermsg">메시지:</label>
-      <textarea name="usermsg" id="usermsg" cols="30" rows="usermsg"></textarea>
-    </p>
-    <button>전송</button>
-  </form>
-  <hr>
+  <h1>Simple BBS</h1>
+  <ul>
+
+    <!-- <li><a href="">글제목1</a><a href="">수정</a><a href="">삭제</a></li> -->
+
+  </ul>
   <p>
-    <a href="index.php">홈으로</a>
+  <a href="write.php">글쓰기</a> 
   </p>
+  <hr>
+  <form action="">
+    <input type="search">
+    <button>검색</button>
+  </form>
 </body>
 </html>
